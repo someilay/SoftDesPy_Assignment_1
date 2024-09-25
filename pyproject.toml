@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "softdespy-assignment-1"
+version = "0.0.1"
+description = "Assignment for Software Design with Python"
+authors = ["Ilia Milioshin <i.milyoshin@innopolis.ru>"]
+packages = [{include = "app.py", from="src"}, {include = "plugins", from="."}]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.scripts]
+app = "app:main"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "~0.115.0"
+uvicorn = "~0.30.6"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
